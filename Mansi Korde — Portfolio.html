@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mansi Korde — Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing projects, skills and contact information.">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --maxw: 1100px;
+      --ff: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+                  radial-gradient(800px 400px at 90% 90%, rgba(59,130,246,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+      padding:32px 16px;
+    }
+
+    .site{
+      max-width:var(--maxw);
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:28px;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(0,0,0,0.5)
+    }
+    nav{display:flex;gap:16px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+    nav a:hover{color:white;background:var(--glass)}
+    .actions{display:flex;gap:8px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;padding:9px 14px;border-radius:10px;color:white;font-weight:600;cursor:pointer}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;margin-bottom:36px;
+    }
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius);padding:22px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .intro h1{margin:0 0 8px;font-size:28px}
+    .intro p{margin:0 0 16px;color:var(--muted)}
+    .socials{display:flex;gap:10px}
+    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:600}
+
+    .profile-card{display:flex;gap:16px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(135deg,#111827,#111827);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700}
+    .profile-card small{display:block;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .project{padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
+
+    footer{margin-top:42px;color:var(--muted);text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start}
+      nav{order:2;width:100%;display:flex;overflow-x:auto}
+      .grid{grid-template-columns:1fr}
+      .avatar{width:96px;height:96px}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    a.link{color:var(--accent);text-decoration:none;font-weight:600}
+
+    /* contact form */
+    form .field{display:flex;flex-direction:column;margin-bottom:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:110px;resize:vertical}
+
+    /* subtle focus */
+    input:focus,textarea:focus,button:focus{outline:2px solid rgba(124,58,237,0.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">MK</div>
+        <div>
+          <div style="font-weight:700">Mansi Korde</div>
+          <div class="muted" style="font-size:13px">Full Stack Developer</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#about">About</a>
+        <a href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#projects">Projects</a>
+        <a href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#skills">Skills</a>
+        <a href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn" onclick="downloadResume()">Download Resume</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h1>Hi — I'm <span style="color:var(--accent)">Mansi Korde</span></h1>
+          <p>I am a passionate software engineering student with hands-on experience in software development , &amp; full-stack development technologies .Through my recent internships &amp; projects, I have developed skills in Java(basics) ,Python ,C++, JavaScript ,SQL ,applying them to build real-world applications &amp; analyze data effectively. I am a passionate software engineering student with hands-on experience in software development , &amp; full-stack web development technologies .Through my recent internships &amp; projects, I have developed skills in Java(basics) ,Python ,C++, JavaScript ,SQL ,applying them to build real-world applications &amp; analyze data effectively. . I strive actively seeking opportunities to contribute in software development , full-stack development. </p>
+
+          <div style="display:flex;gap:10px;align-items:center;margin-top:8px">
+            <div class="chip">Open to work</div>
+            <div class="muted" style="margin-left:8px">Based in: Ahilyanagar, India</div>
+          </div>
+
+          <div style="margin-top:18px">
+            <div style="font-weight:700;margin-bottom:8px">Featured Projects</div>
+            <div class="grid">
+              <div class="project">
+                <h3>Project A</h3>
+                <p class="muted">	Book My Room ,Room Booking System (hotel management)
+
+Tech Stack: Python, MySQL[backend]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+●	Built using python tech stack
+●	Supports role-based booking , real-time availability tracking &amp; automated email notifications to streamline scheduling process. 
+.</p>
+              </div>
+              <div class="project">
+                <h3>Project B</h3>
+                <p class="muted">	Real-Time Bus Tracking System(
+•	This is Smart India Hackathon project ,which we are Building using HTML, CSS, JS[Frontend] , python, MySQL[backend]
+.</p>
+              </div>
+              <div class="project">
+                <h3>Project C</h3>
+                <p class="muted">	Clone Of Travel Websites[Voyage]
+•	Built using HTML ,CSS  [frontend]
+
+	Published Paper [IJSREM]
+•	On Smart campus face recognition system for automated attendance tracking and security enhancement
+          
+.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card profile-card">
+          <div class="avatar">Mansi Korde</div>
+          <div>
+            <div style="font-weight:700">Mansi Korde</div>
+            <small class="muted">software engineer-HTML,CSS,javascript,MySQL</small>
+            <div class="skills" style="margin-top:10px">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">Javascript</div>
+              <div class="skill">MySQL</div>
+               <div class="skill">python</div>
+                <div class="skill">Java</div>
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="link" href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#projects">View projects</a>
+              <a class="link" href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#contact">Contact</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card" style="margin-bottom:18px">
+        <h2>About</h2>
+        <p class="muted">I am a passionate software engineering student with hands-on experience in software development , &amp; full-stack development technologies .Through my recent internships &amp; projects, I have developed skills in Java(basics) ,Python ,C++, JavaScript ,SQL ,applying them to build real-world applications &amp; analyze data effectively. I am a passionate software engineering student with hands-on experience in software development , &amp; full-stack web development technologies .Through my recent internships &amp; projects, I have developed skills in Java(basics) ,Python ,C++, JavaScript ,SQL ,applying them to build real-world applications &amp; analyze data effectively. . I strive actively seeking opportunities to contribute in software development , full-stack development. 
+ 
+</p>
+      </section>
+
+      <section id="projects" class="card" style="margin-bottom:18px">
+        <h2>Projects</h2>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px">
+          <div class="project">
+            <h3>Real-Time Bus Tracking System</h3>
+            <p class="muted">•	This is Smart India Hackathon project ,
+                which we are Building using HTML, CSS, JS[Frontend] , python, MySQL[backend]
+            </p>
+            <div style="margin-top:10px"><a class="link" href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#"></a> <span style="color:var(--muted)">• This projects features are real time bus scheduling,location tracking,real time alert &amp; notification</span> <a class="link" href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#"></a></div>
+          </div>
+          <div class="project">
+            <h3>Real Time Face recognition project for student attendance</h3>
+            <p class="muted">•	On Smart campus face recognition for automated attendance tracking and security enhancement.</p>
+            <div style="margin-top:10px"><a class="link" href="file:///C:/Users/Admin/OneDrive/Desktop/full%20stack%20java/.vscode/portfolio.html#"></a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="card" style="margin-bottom:18px">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">MySQL</div>
+          <div class="skill">Python</div>
+          <div class="skill">Java</div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p class="muted">Want to work with me ...? Send a message — I'll reply within a few days.</p>
+
+        <form id="contactForm" style="margin-top:12px" onsubmit="handleForm(event)">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" required="" placeholder="Your full name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required="" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required="" placeholder="Tell me about the project..."></textarea>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn" type="submit">Send message</button>
+            <small id="formStatus" class="muted">Or email me at <a class="link" href="mailto:you@example.com">mansikorde69@gmail.com</a></small>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="muted">© <span id="year">2025</span> Mansi Korde</footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function downloadResume(){
+      // example: you can replace the URL with your real resume link
+      const url = 'resume.pdf';
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Mansi Korde-Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const status = document.getElementById('formStatus');
+
+      if(!name || !email || !message){
+        status.textContent = 'Please fill all fields.';
+        return;
+      }
+
+      // This is a simple demo: in production hook this to your backend or Form service
+      status.textContent = 'Thanks! Preparing email...';
+      // open user's mail client as fallback
+      const subject = encodeURIComponent('Portfolio inquiry from ' + name);
+      const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+      window.location.href = `mailto:you@example.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+
+</body></html>
